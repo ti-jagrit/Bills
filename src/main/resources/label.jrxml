@@ -1,0 +1,73 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="label" language="java" pageWidth="421" pageHeight="595" orientation="Landscape" columnWidth="401" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="ab0a0f4c-2908-48ac-b801-ff15456a6f69">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="cmpName" class="java.lang.String"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="cmpInfo" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="contact" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="product" class="java.lang.String"/>
+	<parameter name="orderDate" class="java.lang.String"/>
+	<parameter name="deliveryAddress" class="java.lang.String"/>
+	<parameter name="weight" class="java.lang.String"/>
+	<query language="sql"><![CDATA[]]></query>
+	<background splitType="Stretch"/>
+	<title splitType="Stretch"/>
+	<pageHeader height="96" splitType="Stretch">
+		<element kind="frame" uuid="9830ab0f-802b-4a39-901a-e9fbcca6f30c" x="0" y="0" width="380" height="90">
+			<element kind="image" uuid="e5c7e6c7-e1c3-49b6-9b65-c3b0e8861df1" x="19" y="15" width="70" height="70" onErrorType="Icon">
+				<expression><![CDATA[$P{logo}]]></expression>
+			</element>
+			<element kind="textField" uuid="683383f1-90f8-42a0-bb71-15d7a7825d06" x="90" y="10" width="278" height="40" fontSize="18.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$P{cmpName}]]></expression>
+			</element>
+			<element kind="textField" uuid="bf625825-77d7-4554-91e5-0d1651449087" x="90" y="50" width="278" height="30" fontSize="14.0" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$P{cmpInfo}]]></expression>
+			</element>
+			<element kind="line" uuid="ad69b094-214c-4858-a3c8-8ccf246546f2" x="89" y="83" width="279" height="1"/>
+		</element>
+	</pageHeader>
+	<columnHeader splitType="Stretch"/>
+	<detail>
+		<band height="298" splitType="Stretch">
+			<element kind="frame" uuid="97823e3c-0cd4-4f6d-8b06-825424831f3c" x="0" y="0" width="380" height="290">
+				<element kind="staticText" uuid="0f8fda20-f21b-41f7-84d1-223daeb79847" mode="Transparent" x="15" y="3" width="84" height="26" forecolor="#FA1814" backcolor="#FFFFFF" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+					<text><![CDATA[TO:]]></text>
+				</element>
+				<element kind="textField" uuid="6ad84646-f1d2-48fa-bda2-2e26fd276dd1" x="50" y="31" width="280" height="22" fontSize="12.0" bold="true" hTextAlign="Left" vTextAlign="Middle">
+					<expression><![CDATA["Name : "+$P{name}]]></expression>
+				</element>
+				<element kind="textField" uuid="76fe0c78-c993-46ef-9a0d-5b905292ad52" x="50" y="53" width="280" height="18" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+					<expression><![CDATA["Contact : "+$P{contact}]]></expression>
+				</element>
+				<element kind="textField" uuid="1a8de6b1-8fb3-447b-b54f-7b48a86a7a35" x="50" y="72" width="280" height="20" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+					<expression><![CDATA["Address : "+$P{address}]]></expression>
+				</element>
+				<element kind="textField" uuid="fbf27296-d16c-4217-b4d4-0c42f54612ba" x="65" y="192" width="280" height="20" fontSize="12.0" pattern="MMMMM dd, yyyy" vTextAlign="Middle">
+					<expression><![CDATA["Shipping Date : "+new java.util.Date()]]></expression>
+				</element>
+				<element kind="staticText" uuid="3b155e66-69a1-417d-ac6d-77fe792791de" mode="Opaque" x="15" y="109" width="150" height="30" forecolor="#FF0C08" fontSize="16.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+					<text><![CDATA[Order Information]]></text>
+				</element>
+				<element kind="textField" uuid="7a920eca-a4e9-4283-9ef4-457f448b83c0" x="65" y="173" width="280" height="19" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+					<expression><![CDATA["Total Product : "+$P{product}]]></expression>
+				</element>
+				<element kind="textField" uuid="da971276-9a99-4749-99b5-6fdb2c607285" x="67" y="233" width="280" height="23" fontSize="12.0" pattern="MMMMM dd, yyyy">
+					<expression><![CDATA[$P{weight}
+]]></expression>
+				</element>
+				<element kind="textField" uuid="915bf964-67b8-4bac-9052-fd4a4da49663" x="65" y="145" width="280" height="26" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+					<expression><![CDATA["Order Date : "+$P{orderDate}]]></expression>
+				</element>
+				<element kind="textField" uuid="0701c3b3-d00b-4a2e-b9e8-395ac7ee6e8c" x="65" y="212" width="280" height="20" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+					<expression><![CDATA["Delivery : "+$P{deliveryAddress}]]></expression>
+				</element>
+				<element kind="line" uuid="34c73e18-f877-4f74-a51f-fb520bfbb2ec" x="10" y="102" width="361" height="1"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter splitType="Stretch"/>
+	<pageFooter splitType="Stretch"/>
+	<summary splitType="Stretch"/>
+</jasperReport>
