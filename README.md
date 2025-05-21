@@ -1,60 +1,39 @@
-🧾 Billing System
-The Billing System is a full-featured eCommerce and inventory management platform built with Spring Boot. It allows users to log in, search for products, add items to a cart, and complete purchases through integrated payment gateways like eSewa and Khalti.
+# 🧾 Billing System
 
-🔐 Technologies Used
-Spring Boot (MVC architecture)
+The **Billing System** is a complete eCommerce and inventory management solution built using Spring Boot. It allows users to log in, search for products, add them to a cart, and complete purchases via integrated payment gateways such as **eSewa** and **Khalti**.
 
-Spring Security (with OAuth2 integration)
+---
 
-JPA/Hibernate for ORM
+## 🔐 Technologies Used
 
-JSP Pages for the frontend (view layer)
+- Spring Boot (MVC Architecture)
+- Spring Security (OAuth2-based Authentication)
+- JPA / Hibernate (ORM)
+- JSP (Frontend View Layer)
+- MySQL (Database)
 
-MySQL as the database
+---
 
-👥 User Features
-🔑 Login and secure authentication (OAuth2-based)
+## 👥 User Features
 
-🛒 Browse and search products
+- 🔑 Secure Login (OAuth2)
+- 🔍 Product Search
+- 🛒 Add to Cart
+- 💳 Checkout using:
+  - eSewa
+  - Khalti
 
-➕ Add products to the cart
+---
 
-💳 Checkout using:
+## 🛠️ Admin Features
 
-eSewa
+- 🏢 Manage Company Details
+- 📦 Stock Management:
+  - View and update stock
+  - Generate stock reports
+- 🧾 Generate Bills
+- 🗂 Manage Products and Categories
+- 📝 Assign and Manage Tasks
+- ✅ Accept / Reject Orders
 
-Khalti
-
-🛠️ Admin Features
-🏢 Manage company details
-
-📦 Stock management:
-
-View current stock
-
-Generate stock reports
-
-🧾 Generate and manage bills
-
-📁 Manage products and categories
-
-📑 Assign and manage tasks
-
-✅ Accept/Reject customer orders
-
-📂 Project Structure
-css
-Copy
-Edit
-billing-system/
-├── src/
-│   ├── main/
-│   │   ├── java/com/example/billingsystem/
-│   │   ├── resources/
-│   │   │   └── application.properties
-│   └── webapp/
-│       └── WEB-INF/
-│           └── jsp/
-│               └── *.jsp
-├── pom.xml
-└── README.md
+---
